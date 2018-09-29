@@ -1,0 +1,9 @@
+// sort :: a[] -> a[]
+function quicksort (lista) {
+  if (lista.length === 0) return []
+  return [
+    ...quicksort(lista.slice(1).filter(x => x < lista[0])),
+    lista[0],
+    ...quicksort(lista.slice(1).filter(x => x >= lista[0]))
+  ]
+}

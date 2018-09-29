@@ -1,0 +1,5 @@
+// factorial :: Number -> Maybe Number -> Number
+const factorial = (n, acc = 1) =>
+  n < 2
+    ? acc
+    : factorial(n - 1 , n * acc)

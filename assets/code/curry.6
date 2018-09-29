@@ -1,0 +1,12 @@
+// in :: a[] -> a -> Boolean
+const in = list => elem => list.includes(elem)
+
+// included :: a[] -> (a[] -> b -> Boolean) -> b -> Boolean
+const included = (list, fn = null) =>
+  elem =>
+    fn
+      ? fn(list, elem)
+      : list.includes(elem)
+
+// pluck :: String -> Object -> any
+const pluck = key => element => element[key]

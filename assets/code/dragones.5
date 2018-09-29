@@ -1,0 +1,18 @@
+// dragonificar :: String -> String -> String -> String
+const dragonificar => x => y => z =>
+  `${z} es un dragón ${y} que escupe ${x}!`
+
+const escupeFuego = dragonificar('fuego')
+const escupeFuegoAzul = dragonificar('fuego azul')
+
+escupeFuego('gigante')('Drogon')
+// Drogon es un dragón gigante que escupe fuego!
+
+escupeFuego('grande')('Rhaegal')
+// Rhaegal es dragón grande que escupe fuego!
+
+escupeFuegoAzul('grande')('Viserion')
+// Viserion es un dragón grande que escupe fuego azul!
+
+escupeFuegoAzul('gigante')('Sindragosa')
+// Sindragosa es un dragón gigante que escupe fuego azul!

@@ -1,0 +1,22 @@
+// ... :: Pokemon[] -> (Pokemon[] -> Pokemon -> Boolean) -> Pokemon[]
+const pokemonesQueNoTengo =
+  included(MisPokemones, (lista, elem) =>
+    lista.findIndex(x => x.pokemonId === elem.pokemonId) === -1
+  )
+
+// tengoEsePokemon :: Pokemon[] -> Pokemon -> Boolean
+const tengoEsePokemon = (pokedex, pokemon) =>
+  pokedex
+    .map(pluck('pokemonId'))
+    .includes(pokemon.pokemonId)
+
+// reductor :: Pokemon[] -> Pokemon -> Pokemon[]
+const reductor = (pokedex, pokemon) =>
+  tengoEsePokemon(pokedex, pokemon)
+    ? [ ...pokedex, pokemon ]
+    : pokedex
+
+PokemonesSalvajes
+  .filter(pokemonesQueNoTengo)
+  .reduce(reductor, [])
+// [{ name: 'zubat', level: 5, pokemonId: 41 }]

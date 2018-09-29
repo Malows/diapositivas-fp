@@ -1,0 +1,18 @@
+const pokemonesQueNoTengo =
+  included(MisPokemones, (lista, elem) =>
+    lista.findIndex(x => x.pokemonId === elem.pokemonId) === -1
+  )
+
+PokemonesSalvajes
+  .filter(pokemonesQueNoTengo)
+  .reduce((acc, elem) => {
+    const contemplado = pokedex
+      .map(pluck('pokemonId'))
+      .includes(pokemon.pokemonId)
+
+    if (contemplado) {
+      pokedex.push(pokemon)
+    }
+
+    return pokedex
+  }, [])

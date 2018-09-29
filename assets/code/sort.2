@@ -1,0 +1,17 @@
+// mergesort :: a[] -> a[]
+function mergesort (lista) {
+  if (lista.length < 2) return lista
+  const mitad = parseInt(lista.length / 2)
+  let izq = lista.slice(0, mitad)
+  let der = lista.slice(mitad)
+  return merge( mergesort(izq), mergesort(der) )
+}
+
+// merge :: a[] -> a[] -> a[]
+function merge (izq, der) {
+  if (izq.length === 0) return der
+  if (der.length === 0) return izq
+  return (izq[0] < der[0])
+    ? [ izq[0], ...merge(izq.slice(1), der) ]
+    : [ der[0], ...merge(izq, der.slice(1)) ]
+}

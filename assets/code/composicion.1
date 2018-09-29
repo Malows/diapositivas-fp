@@ -1,0 +1,27 @@
+const listaDePedidos = [
+  { plato: 'pizza', precio: 20, cantidad: 2 },
+  { plato: 'ensalada', precio: 5, cantidad: 4 },
+  { plato: 'hamburguesa', precio: 12, cantidad: 2 },
+  { plato: 'bebida', precio: 5, cantidad: 9 }
+]
+
+const multiplicadoPorCantidad = []
+for (let i = 0; i < listaDePedidos.length; i++) {
+  const { precio, cantidad } = listaDePedidos[i]
+  multiplicadoPorCantidad.push(precio * cantidad)
+}
+
+const agregarImpuesto = []
+for (let i = 0; i < multiplicadoPorCantidad.length; i++) {
+  agregarImpuesto.push(multiplicadoPorCantidad[i] * 1.21)
+}
+
+const agregarPropina = []
+for (let i = 0; i < agregarImpuesto.length; i++) {
+  agregarPropina.push(agregarImpuesto[i] * 1.1)
+}
+
+let totalAPagar = 0
+for (let i = 0; i < agregarPropina.length; i++) {
+  totalAPagar += agregarPropina[i]
+}
