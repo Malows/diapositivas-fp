@@ -205,48 +205,6 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={['slide']} bgColor="primary">
-          <CodePane lang="javascript" textSize="1.5rem" source="const add2 = x => x + 2" margin="5rem auto"/>
-          <Appear><CodePane lang="javascript" textSize="1.5rem" source="add2(2) + add2(3)  // 4 + 5 -> 9" margin="5rem auto"/></Appear>
-          <Appear><CodePane lang="javascript" textSize="1.5rem" source="4 + 5  // 9" margin="5rem auto"/></Appear>
-        </Slide>
-
-        <Slide transition={['slide']} bgColor="primary">
-          <Heading size={1} caps lineHeight={1} textColor="secondary">Clausura</Heading>
-          <Appear><Text>Una función evaluada en un entorno que contiene variables asociadas al entorno</Text></Appear>
-          <Appear><Text textColor="tertiary">Composición y Currificación</Text></Appear>
-        </Slide>
-
-        <Slide transition={['slide']} bgColor="primary">
-          <Heading size={1} caps lineHeight={1} textColor="secondary">Currificación</Heading>
-          <Appear><CodePane lang="javascript" textSize="1.5rem" source={codigo.fp1} margin="1rem auto"/></Appear>
-          <Appear><CodePane lang="javascript" textSize="1.5rem" source={codigo.curry1} margin="1rem auto"/></Appear>
-          <Appear><CodePane lang="javascript" textSize="1.5rem" source={codigo.curry2} margin="1rem auto"/></Appear>
-          <Appear><CodePane lang="javascript" textSize="1.5rem" source={codigo.curry3} margin="1rem auto"/></Appear>
-        </Slide>
-
-        <Slide transition={['slide']} bgColor="primary">
-          <CodePane lang="javascript" textSize="1.5rem" source={codigo.curry4} margin="1rem 0"/>
-        </Slide>
-
-        <Slide transition={['slide']} bgColor="primary">
-          <CodePane lang="javascript" textSize="1.5rem" source={codigo.curry5} margin="1rem 0"/>
-        </Slide>
-
-        <Slide transition={['slide']} bgColor="primary">
-          <Heading size={1} caps lineHeight={1} textColor="secondary">Composición</Heading>
-          <Text>Una o más funciones cuyos retornos son los argumentos de otra función</Text>
-          <Appear><CodePane lang="javascript" textSize="1.5rem" source="funcion2( funcion1( input ) )" margin="5rem auto"/></Appear>
-        </Slide>
-
-        <Slide transition={['slide']} bgColor="primary">
-          <CodePane lang="javascript" textSize="1rem" source={codigo.composicion1} margin="0 auto"/>
-        </Slide>
-
-        <Slide transition={['slide']} bgColor="primary">
-          <CodePane lang="javascript" textSize="1rem" source={codigo.composicion2} margin="0 auto"/>
-        </Slide>
-
-        <Slide transition={['slide']} bgColor="primary">
           <Heading size={2} caps lineHeight={1} textColor="secondary">Funciones de orden superior</Heading>
           <Text>Funciones que reciben una función como argumento para expandir su funcionalidad</Text>
         </Slide>
@@ -298,6 +256,48 @@ export default class Presentation extends React.Component {
         <Slide transition={['slide']} bgColor="primary">
           <Text>forEach</Text>
           <Text>sort</Text>
+        </Slide>
+
+        <Slide transition={['slide']} bgColor="primary">
+          <CodePane lang="javascript" textSize="1.5rem" source="const add2 = x => x + 2" margin="5rem auto"/>
+          <Appear><CodePane lang="javascript" textSize="1.5rem" source="add2(2) + add2(3)  // 4 + 5 -> 9" margin="5rem auto"/></Appear>
+          <Appear><CodePane lang="javascript" textSize="1.5rem" source="4 + 5  // 9" margin="5rem auto"/></Appear>
+        </Slide>
+
+        <Slide transition={['slide']} bgColor="primary">
+          <Heading size={1} caps lineHeight={1} textColor="secondary">Clausura</Heading>
+          <Appear><Text>Una función evaluada en un entorno que contiene variables asociadas al entorno</Text></Appear>
+          <Appear><Text textColor="tertiary">Composición y Currificación</Text></Appear>
+        </Slide>
+
+        <Slide transition={['slide']} bgColor="primary">
+          <Heading size={1} caps lineHeight={1} textColor="secondary">Currificación</Heading>
+          <Appear><CodePane lang="javascript" textSize="1.5rem" source={codigo.fp1} margin="1rem auto"/></Appear>
+          <Appear><CodePane lang="javascript" textSize="1.5rem" source={codigo.curry1} margin="1rem auto"/></Appear>
+          <Appear><CodePane lang="javascript" textSize="1.5rem" source={codigo.curry2} margin="1rem auto"/></Appear>
+          <Appear><CodePane lang="javascript" textSize="1.5rem" source={codigo.curry3} margin="1rem auto"/></Appear>
+        </Slide>
+
+        <Slide transition={['slide']} bgColor="primary">
+          <CodePane lang="javascript" textSize="1.5rem" source={codigo.curry4} margin="1rem 0"/>
+        </Slide>
+
+        <Slide transition={['slide']} bgColor="primary">
+          <CodePane lang="javascript" textSize="1.5rem" source={codigo.curry5} margin="1rem 0"/>
+        </Slide>
+
+        <Slide transition={['slide']} bgColor="primary">
+          <Heading size={1} caps lineHeight={1} textColor="secondary">Composición</Heading>
+          <Text>Una o más funciones cuyos retornos son los argumentos de otra función</Text>
+          <Appear><CodePane lang="javascript" textSize="1.5rem" source="funcion2( funcion1( input ) )" margin="5rem auto"/></Appear>
+        </Slide>
+
+        <Slide transition={['slide']} bgColor="primary">
+          <CodePane lang="javascript" textSize="1rem" source={codigo.composicion1} margin="0 auto"/>
+        </Slide>
+
+        <Slide transition={['slide']} bgColor="primary">
+          <CodePane lang="javascript" textSize="1rem" source={codigo.composicion2} margin="0 auto"/>
         </Slide>
 
         <Slide transition={['slide']} bgImage={images.sw} bgColor="secondary">
