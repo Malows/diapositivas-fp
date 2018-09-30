@@ -1,0 +1,14 @@
+const listaDePedidos = [
+  { plato: 'pizza', precio: 20, cantidad: 2 },
+  { plato: 'ensalada', precio: 5, cantidad: 4 },
+  { plato: 'hamburguesa', precio: 12, cantidad: 2 },
+  { plato: 'bebida', precio: 5, cantidad: 9 }
+]
+
+const multiplicadoPorCantidad = listaDePedidos.map(({ precio, cantidad}) => precio * cantidad)
+
+const agregarImpuesto = multiplicadoPorCantidad.map(x => x * 1.21)
+
+const agregarPropina = agregarImpuesto.map(x => x * 1.1)
+
+const totalAPagar = agregarPropina.reduce((acc, elem) => acc + elem, 0)

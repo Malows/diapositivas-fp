@@ -1,0 +1,25 @@
+const listaDePedidos = [
+  { plato: 'pizza', precio: 20, cantidad: 2 },
+  { plato: 'ensalada', precio: 5, cantidad: 4 },
+  { plato: 'hamburguesa', precio: 12, cantidad: 2 },
+  { plato: 'bebida', precio: 5, cantidad: 9 }
+]
+
+// calcularTotalAPagar :: Pedido[] -> Number
+function calcularTotalAPagar (pedidos) {
+
+  // multiplicadoPorCantidad :: a -> Number
+  const multiplicadoPorCantidad = x => x.precio * x.cantidad
+
+  // agregarImpuesto :: Number -> Number
+  const agregarImpuesto = x => 1.21 * x
+
+  // agregarPropina :: Number -> Number
+  const agregarPropina = x => 1.1 * x
+
+  // aplicarPago :: Pedido -> Number
+  const aplicarPago = multiplicadoPorCantidad |> agregarImpuesto |>  agregarPropina
+
+  return pedidos.reduce((acc, elem) => acc + aplicarPago(elem), 0)
+}
+

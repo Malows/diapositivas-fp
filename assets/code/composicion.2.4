@@ -1,0 +1,20 @@
+const listaDePedidos = [
+  { plato: 'pizza', precio: 20, cantidad: 2 },
+  { plato: 'ensalada', precio: 5, cantidad: 4 },
+  { plato: 'hamburguesa', precio: 12, cantidad: 2 },
+  { plato: 'bebida', precio: 5, cantidad: 9 }
+]
+
+// calcularTotalAPagar :: Pedido[] -> Number
+function calcularTotalAPagar (pedidos) {
+  // transformacion :: Pedido -> Number
+  const transformacion =
+    x => x.precio * x.cantidad
+    |> x => 1.21 * x
+    |> x => 1.1 * x
+
+  const sum = (acc, elem) => acc + transformacion(elem)
+
+  return pedidos.reduce(sum, 0)
+}
+

@@ -17,7 +17,4 @@ const agregarPropina = x => 1.1 * x
 // aplicarPago :: a -> Number
 const aplicarPago = x => agregarPropina(agregarImpuesto(multiplicadoPorCantidad(x)))
 
-let total = 0
-for (let i = 0; i < listaDePedidos.length; i++) {
-  total += aplicarPago(listaDePedidos[i])
-}
+const totalAPagar = agregarPropina.reduce((acc, elem) => acc + elem, 0)
